@@ -1,0 +1,93 @@
+.container{
+    width: 600px;
+    margin: auto;
+}
+/*chieu cao,chieu dai cua phan tu se bao gom ca padding*/
+*{
+    box-sizing: border-box;
+}
+/* xoa bo padding va margin cua the ul*/
+ul{
+    margin: 0;
+    padding:0;
+}
+/* dinh dang cac the li*/
+ul li{
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #eeeeee;
+    font-size: 18px;
+    transition: 0.2s;
+    list-style: none;
+}
+/* thiet lap cac phan tu li mot mau nen khac*/
+ul li:nth-child(odd){
+    background: #f9f9f9;
+}
+/*khi the li duoc chon thi them mau nen va gach nagn*/
+ul li.checked{
+    background: #888888;
+    color: #ffff;
+    text-decoration: line-through;
+}
+/* them vao trc the li mot day tich khi the duoc chon*/
+ul li.checked::before{
+    content: '';
+    position: absolute;
+    border-color: #ffff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top:10px;
+    left:16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+/*dinh dang button xoa cong viec*/
+.close{
+    position: absolute;
+    right: 0;
+    top:0;
+    padding: 12px 16px 12px 16px;
+}
+.close:hover{
+    background-color: #f44336;
+    color: white;}
+    /*phan header cua danh sach*/
+    .header{
+        background-color: #f44336;
+        padding: 30px 40px;
+        color: white;
+        text-align: center;
+    }
+    /* xoa float cua cac phan trc header*/
+    .header::after{
+        content:"";
+        display: table;
+        clear: both;
+    }
+
+    /* dinh dang phan the input*/
+    input{
+        border:none;
+        width:75%;
+        padding:10px;
+        float:left;
+        font-size: 16px;
+    }
+    /*dinh dang buttonn "them"*/
+    .addBtn{
+        padding:10px;
+        width: 25%;
+        background: #d9d9d9;
+        color: #555555;
+        float:left;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .addBtn:hover{
+        background-color: #bbbbbb;
+    }
